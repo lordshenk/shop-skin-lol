@@ -1,38 +1,389 @@
+@font-face {
+	font-family: lol-bold;
+	src: url(./assets/lol-bold.woff);
+}
+@font-face {
+	font-family: lol-regular;
+	src: url(./assets/lol-regular.woff);
+}
+
 .App {
-  text-align: center;
+	padding: 0;
+	margin: 0;
+}
+a {
+	color: #fff !important;
+}
+button {
+	border: none !important;
+}
+button:focus {
+	box-shadow: none !important;
+	outline: none !important;
+}
+input {
+	border: none;
+}
+input:focus {
+	outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-weight: 500;
+	font-size: 1.2rem;
+	z-index: 9999;
+	transition: all 0.5s;
+}
+.menu li {
+	margin-right: 1.5rem;
+}
+.menu .open {
+	background-color: #000;
+}
+.menu .open li {
+	border-bottom: 2px solid #c28f2c77;
+}
+.menu .scroll li {
+	border-bottom: none;
+}
+.menu .navbar-brand img {
+	width: 30px;
+	height: auto;
+}
+.menu button.btn {
+	border: none;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	border-radius: 0px;
+}
+@media (min-width: 768px) {
+	.menu li:hover a {
+		border-bottom: 2px solid #c28f2c;
+		margin-bottom: -2px;
+	}
+	.menu .navbar-brand img {
+		width: 50px;
+	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home {
+	position: relative;
+	background-image: url('./assets/layout-bg.jpg');
+	background-position: right center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home .title {
+	position: relative;
+	height: 100vh;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 3rem;
+	z-index: 0;
+}
+.home .title::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('./assets/bg-lol.png');
+	background-size: cover;
+	background-position: center;
+	filter: brightness(80%);
+}
+.home .title p {
+	position: relative;
+	z-index: 999;
+}
+.home .title p:first-child {
+	font-family: lol-bold;
+	font-size: 3rem;
+	font-style: italic;
+	text-shadow: 0px 0px 10px #0003;
+	margin-bottom: 0;
+}
+.home .title p:last-child {
+	font-weight: 400;
+	width: 80%;
+	font-size: 1rem;
+}
+.hot,
+.champions {
+	margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+	.home .title p:last-child {
+		font-size: 1.5rem;
+	}
+	.home .title p:first-child {
+		font-size: 6rem;
+		letter-spacing: 1rem;
+	}
 }
 
-.App-link {
-  color: #61dafb;
+.hot h1,
+.champions h1 {
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff;
+	margin: 0 1rem;
+	font-family: lol-bold;
+	text-align: center;
+	border-bottom: 2px solid #c28f2c;
+	margin: 0 0 2rem !important;
+	letter-spacing: .2rem;
+}
+.hot .carousel-item {
+  height: 70vh !important;
+  width: 100vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hot .carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+.hot .carousel-caption {
+	display: block !important;
+}
+.hot .carousel-caption p {
+	font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+	.hot h1,
+	.champions h1 {
+		margin: 5rem 0 5rem !important;
+	}
+	.hot .carousel-item {
+	  height: 80vh !important;
+	}
+}
+
+.champions {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+.champions input {
+	color: #fff;
+	width: 70%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 1.3rem;
+	padding: .2rem 0;
+	margin: 0 0 4rem 0;
+	background: transparent;
+	transition: border-bottom 0.5s;
+	border-bottom: 2px solid #c28f2c55;
+}
+.champions input::placeholder {
+	color: #fff7;
+	font-weight: 400;
+	transition: all 0.5s;
+}
+.champions input:focus {
+	border-bottom: 2px solid #c28f2c;
+}
+.champions input:focus::placeholder {
+	color: #fff;
+}
+.champions .champion {
+	width: 50%;
+}
+.champions .champion .card {
+	background: #0000;
+	box-shadow: 0 0 10px 0 #000a;
+	width: 90%;
+	overflow: hidden;
+	border: none;
+	border-radius: 0;
+	transition: all 0.5s;
+}
+.champions .champion .card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate( 25%, 35%) rotate(270deg);
+	width: 15%;
+	height: 15%;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	opacity: 0;
+	transition: all 0.3s;
+	z-index: 1;
+}
+.champions .champion .card::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: translate( -25%, -35%) rotate(270deg);
+	width: 15%;
+	height: 15%;
+	border-bottom: 2px solid #fff;
+	border-left: 2px solid #fff;
+	transition: all 0.3s;
+	opacity: 0;
+	z-index: 1;
+}
+.champions .champion .card:hover::before {
+	transform: translate( 20%, 30%) rotate(270deg);
+	opacity: .9;
+}
+.champions .champion .card:hover::after {
+	transform: translate( -20%, -30%) rotate(270deg);
+	opacity: .9;
+}
+.champions .champion .card img {
+	width: 150%;
+	height: auto;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.champions .champion .card-body {
+	padding: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #1b123d55;
+	backdrop-filter: blur(3px);
+}
+
+.champions .champion .card-title {
+	font-family: lol-bold;
+	color: #fff;
+	margin: .5rem;
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+@media (max-width: 320px) {
+	.champions .champion .card-title {
+		font-size: .9rem;
+	}
+}
+@media (min-width: 768px) {
+	.champions {
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+	.champions input {
+		font-size: 2rem;
+		margin: 0 0 7rem 0;
+	}
+	.champions .champion {
+		width: 25%;
+	}
+	
+	.champions .champion .card-title {
+		font-size: 2rem;
+	}
+	
+}
+
+.footer {
+	background: #000;
+	padding-top: 2rem;
+}
+.footer div {
+	margin-bottom: 1rem;
+}
+.footer img {
+	width: 40px;
+	height: auto;
+	margin-right: 1rem;
+	filter: invert(98%) sepia(0%) saturate(12%) hue-rotate(185deg) brightness(80%) contrast(82%);
+}
+.footer div p {
+	margin-bottom: 0;
+	letter-spacing: .2rem;
+	font-size: 1.3rem;
+}
+.footer p {
+	color: #bbb;
+}
+.footer a:hover {
+	text-decoration: none;
+}
+@media (min-width: 768px) {
+	.footer img {
+		width: 50px;
+	}
+	.footer div p {
+		font-size: 1.5rem;
+	}
+}
+
+.profile .details {
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+}
+.profile .details::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #0007;
+	z-index: -1;
+}
+.profile .footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	background: transparent;
+}
+.profile .info {
+	margin-top: 3rem;
+	width: 100%;
+	height: 200px;
+	background: #1b123d55;
+}
+.profile .info > img {
+	border-radius: 50%;
+	width: 6rem;
+	height: 6rem;
+	border: 3px solid #c28f2c;
+	box-shadow: 0 0 10px 0 #0009;
+	margin: 0 1rem;
+}
+
+.profile .info p {
+	color: #fff;
+	margin-bottom: 0;
+}
+.profile .info p:first-child {
+	font-family: lol-bold;
+	font-size: 1.5rem;
+}
+.profile .info > div img {
+	width: 1rem;
+	height: 1rem;
+	position: relative;
+	bottom: .2rem;
+}
+.profile .info div div > img {
+	position: relative;
+	top: .2rem;
+	margin-right: .4rem;
+} 
