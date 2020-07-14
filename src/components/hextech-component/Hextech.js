@@ -9,8 +9,8 @@ function Hextech() {
 	return (
 		<div className='hextech'>
 			<Menu />
+			<h1>Hextech Crafting</h1>
 			<img src={hextech} alt=""/>
-			{/*<Footer />*/}
 		</div>
 	)
 }

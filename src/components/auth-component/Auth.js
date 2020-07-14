@@ -18,6 +18,7 @@ function Auth() {
 		setPwd(e.target.value);
 	}
 	function handleClick() {
+		let finalUser;
 		if (user.length === 0 || pwd.length === 0) {
 			setError(true);
 			return;
@@ -36,8 +37,13 @@ function Auth() {
 				return;
 			}
 		}
-		localStorage.setItem('user', user);
-		history.push('/home');
+		if (user.length > 9) {
+			finalUser = user.substring(0, 9);
+		} else {
+			finalUser = user;
+		}
+		localStorage.setItem('user', finalUser);
+		history.replace('/home');
 	}
 
 	return(

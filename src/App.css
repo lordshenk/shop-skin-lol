@@ -62,6 +62,19 @@ input:focus {
 	border-radius: 0px;
 	background: #c28f2c;
 }
+.menu .rp {
+	font-weight: 500;
+	font-size: 1.5rem;
+	color: #fff;
+	display: none;
+	opacity: .9;
+}
+.menu .rp img {
+	height: 40px;
+	position: relative;
+	top: -.3rem;
+	margin-left: .5rem;
+}
 @media (min-width: 768px) {
 	.menu li:hover a {
 		border-bottom: 2px solid #c28f2c;
@@ -69,6 +82,9 @@ input:focus {
 	}
 	.menu .navbar-brand img {
 		width: 50px;
+	}
+	.menu .rp {
+		display: block;
 	}
 }
 

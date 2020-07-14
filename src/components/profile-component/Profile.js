@@ -11,6 +11,7 @@ import rp from '../../assets/rp.png';
 import { trendSkins as history } from '../../assets/champions.js';
 
 function Profile(props) {
+	const user = localStorage.getItem('user');
 	return (
 		<div className="profile" style={{backgroundImage: `url(${history[0].linkImg})`}}>
 			<ScrollTopOnMount />
@@ -24,14 +25,14 @@ function Profile(props) {
 							<div className="info d-flex align-items-center">
 								<img src={avts[Math.floor(Math.random()*avts.length)]} alt="avatar"/>
 								<div>
-									<p>Anonymous</p>
-									<p><img src={mark} alt="ingame"/> lordshenk</p>
-									<div className='d-flex '><img src={rp} alt="rp"/><p>9999</p></div>
+									<p>{ user ? user : 'Anonymous'}</p>
+									<p><img src={mark} alt="ingame"/>{ user ? user : 'ingame'}</p>
+									<div className='d-flex '><img src={rp} alt="rp"/><p>{ user ? 9999 : 0}</p></div>
 								</div>
 							</div>
 						</Col>
 						<Col xs="12" className='history'>
-							<p>History</p>
+							<h1>History</h1>
 							<Table striped>
 								<thead>
 									<tr>

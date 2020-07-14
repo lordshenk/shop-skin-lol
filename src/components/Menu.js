@@ -11,13 +11,15 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.svg';
+import rp from "../assets/rp.png";
 
 function Menu() {
   const [ isScroll, setIsScroll] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const user = localStorage.getItem('user');
   function handleScroll() {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 50) {
       setIsScroll(true);
     } else {
       setIsScroll(false);
@@ -52,7 +54,8 @@ function Menu() {
               </NavItem>
             </Nav>
           </Collapse>
-          <Button tag={Link} to='/auth/signin' className='d-none d-md-block ml-auto'>Sign In</Button>
+          { !user && <Button tag={Link} to='/auth/signin' className='d-none d-md-block ml-auto'>Sign In</Button>}
+          { user && <div className='rp'>9999<img src={rp} alt=""/></div>}
       </Navbar>
     </div>
   )

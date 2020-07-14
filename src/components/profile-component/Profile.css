@@ -56,24 +56,28 @@
 	position: relative;
 	bottom: .2rem;
 }
+.profile .info > div > p + p img {
+	margin-right: .7rem;
+}
 .profile .info div div > img {
 	position: relative;
 	top: .1rem;
-	margin-right: .4rem;
+	margin-right: .7rem;
 }
 .profile .info > div p:not(:first-child) {
 	font-size: 1.2rem;
 }
-.profile .history p {
+.profile .history h1 {
 	display: inline-block;
-	font-family: lol-bold;
-	font-size: 2.5rem;
-	color: #fff;
-	text-align: center;
-	border-bottom: 2px solid #c8aa6e;
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
+	color: #fff;
+	font-family: lol-bold;
+	text-align: center;
+	border-bottom: 2px solid #c28f2c;
+	margin: 0 0 2rem;
+	letter-spacing: .2rem;
 }
 .profile .table {
 	position: relative;
