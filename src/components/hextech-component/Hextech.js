@@ -10,7 +10,7 @@ function Hextech() {
 		<div className='hextech'>
 			<Menu />
 			<img src={hextech} alt=""/>
-			<Footer />
+			{/*<Footer />*/}
 		</div>
 	)
 }

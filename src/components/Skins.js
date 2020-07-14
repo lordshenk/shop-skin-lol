@@ -45,7 +45,7 @@ function Skins({items}) {
           captionText={item.name} 
           captionHeader={item.skin} />
         <Button className='buy-btn'>
-          <span>{ind % 2 === 0 ? 299 : (ind % 3 === 0 ? 599 : 210)}</span>
+          <span>{ind % 2 === 0 ? 310 : (ind % 3 === 0 ? 599 : (ind % 7 === 0 ? 710 : 110))}</span>
           <img src={rp} alt=""/>
         </Button>
       </CarouselItem>

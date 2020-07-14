@@ -52,7 +52,7 @@ function Menu() {
               </NavItem>
             </Nav>
           </Collapse>
-          <Button tag={Link} to='/auth/signin' color='info' className='d-none d-md-block ml-auto'>Sign In</Button>
+          <Button tag={Link} to='/auth/signin' className='d-none d-md-block ml-auto'>Sign In</Button>
       </Navbar>
     </div>
   )

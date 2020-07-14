@@ -1,0 +1,82 @@
+.auth {
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+	background-image: url('../../assets/layout-bg.jpg');
+}
+.auth h1 {
+	display: inline-block;
+	position: relative;
+	color: #fff;
+	font-family: lol-bold;
+	text-align: center;
+	border-bottom: 2px solid #c28f2c;
+	margin: 0 0 2rem;
+	letter-spacing: .2rem;
+}
+.auth form {
+	position: relative;
+	width: 70%;
+}
+.auth input {
+	text-align: center;
+	display: block;
+	color: #fff;
+	width: 100%;
+	font-size: 1.3rem;
+	padding: .2rem 0;
+	margin: 0 0 2rem 0;
+	background: transparent;
+	transition: border-bottom 0.5s;
+	border-bottom: 2px solid #c28f2c55;
+}
+.auth input::placeholder {
+	color: #fff7;
+	font-weight: 400;
+	transition: all 0.5s;
+}
+.auth input:focus {
+	border-bottom: 2px solid #c28f2c;
+}
+.auth input:focus::placeholder {
+	color: #fff;
+}
+.auth input[type='password'] {
+	margin: 0 0 1rem 0;
+}
+.auth input[type='submit'] {
+	width: 35%;
+	border: none;
+	background: #c28f2c;
+}
+.auth form p {
+	color: #b83811;
+	font-size: 1.3rem;
+	margin: 0;
+	opacity: 0;
+}
+.auth .error {
+	opacity: 1;
+}
+.auth > a {
+	position: fixed;
+	bottom: 0;
+	margin-bottom: .5rem;
+	opacity: .3;
+}
+
+@media (min-width: 768px) {
+	.auth h1 {
+		margin: 0 0 4rem;
+	}
+	.auth input {
+		width: 70%;
+	}
+	.auth input[type='submit'] {
+		width: 25%;
+		margin-top: 2rem;
+	}
+	.auth > a {
+		font-size: 1.2rem;
+	}
+}

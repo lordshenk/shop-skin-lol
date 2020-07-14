@@ -13,7 +13,7 @@ function App() {
       <div className="App" >
         <Switch>
           <Route path='/auth'>
-            <Hextech />
+            <Auth />
           </Route>
           <Route path='/hextech'>
             <Hextech />

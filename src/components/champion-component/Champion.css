@@ -4,10 +4,10 @@
 	background-image: url('../../assets/layout-bg.jpg');
 	background-size: cover;
 	background-position: center;
+	overflow: hidden;
 }
-.champ .footer {
-	position: relative;
-	width: 100%;
+.champ .skins {
+	margin: 0;
 }
 .champ .skins h1:first-child {
 	display: none;

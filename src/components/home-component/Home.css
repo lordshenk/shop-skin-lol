@@ -6,6 +6,8 @@
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 .home .title {
@@ -66,11 +68,10 @@
 	left: 50%;
 	transform: translateX(-50%);
 	color: #fff;
-	margin: 0 1rem;
 	font-family: lol-bold;
 	text-align: center;
 	border-bottom: 2px solid #c28f2c;
-	margin: 0 0 2rem !important;
+	margin: 0 0 2rem;
 	letter-spacing: .2rem;
 }
 .skins .carousel-item {

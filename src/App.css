@@ -60,6 +60,7 @@ input:focus {
 	padding-left: 2rem;
 	padding-right: 2rem;
 	border-radius: 0px;
+	background: #c28f2c;
 }
 @media (min-width: 768px) {
 	.menu li:hover a {

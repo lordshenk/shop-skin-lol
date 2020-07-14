@@ -45,7 +45,7 @@ function Profile(props) {
 										<tr key={ind}>
 											<td>{ele.skin}</td>
 											<td>Today</td>
-											<td>699</td>
+											<td>599</td>
 										</tr>
 									))}
 								</tbody>
@@ -54,7 +54,7 @@ function Profile(props) {
 					</Row>
 				</Container>
 			</div>
-			<Footer />
+			{/*<Footer />*/}
 		</div>
 	)
 }

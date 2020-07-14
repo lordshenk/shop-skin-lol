@@ -25,7 +25,7 @@ function Champion() {
 			<ScrollTopOnMount />
 			<Menu />
 			<Skins items={items}/>
-			<Footer />
+			{/*<Footer />*/}
 		</div>
 	)
 }
