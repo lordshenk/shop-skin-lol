@@ -1,9 +1,13 @@
 import React from 'react';
+import './Home.css';
 import { Link } from 'react-router-dom';
 import Menu from '../Menu.js';
-import Trending from './Trending.js';
+import Skins from '../Skins.js';
 import Champions from './Champions.js';
 import Footer from '../Footer.js';
+import { trendSkins } from '../../assets/champions';
+
+const items = [...trendSkins];
 
 function Home() {
   return(
@@ -14,7 +18,7 @@ function Home() {
     	 <p>With more than 900 champions, 
     	 	you’ll find the perfect match for your style.</p>
     	</div>
-      <Trending />
+      <Skins items={items}/>
       <Champions />
       <Footer />
     </div>

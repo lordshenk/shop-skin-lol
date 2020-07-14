@@ -1,0 +1,43 @@
+
+.hextech {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background: #000203;
+}
+
+.hextech > img {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	width: 100%;
+	height: auto;
+	transform: translate(-50%, -50%);
+	animation: vibrate-1 0.3s 0;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+@keyframes vibrate-1{
+	0%{transform:translate(-50%, -50%)}
+	20%{transform:translate(calc(-50% -2px), calc(-50% - 2px))}
+	40%{transform:translate(calc(-50% -2px), calc(-50% - 2px))}
+	60%{transform:translate(calc(-50% + 2px), calc(-50% + 2px))}
+	80%{transform:translate(calc(-50% + 2px), calc(-50% - 2px))}
+	100%{transform:translate(-50%, -50%)}
+}
+
+@media (min-width: 768px) {
+	.hextech > img {
+		width: 70%;
+	}
+}
+@media (min-width: 1200px) {
+	.hextech > img {
+		top: 40%;
+		width: 50%;
+	}
+}

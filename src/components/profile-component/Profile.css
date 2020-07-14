@@ -1,0 +1,152 @@
+.profile {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+}
+.profile:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgb(0,0,0);
+	background: radial-gradient(circle at center top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+	background-position: 0 0;
+	z-index: 0;
+}
+.profile .details {
+	position: relative;
+	min-height: 95vh;
+	width: 100%;
+	z-index: 1;
+}
+.profile .footer {
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+.profile .info {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	width: 100%;
+	height: 200px;
+}
+.profile .info > img {
+	border-radius: 50%;
+	width: 6rem;
+	height: 6rem;
+	border: 3px solid #c28f2c;
+	box-shadow: 0 0 10px 0 #0009;
+	margin: 0 1rem;
+}
+
+.profile .info p {
+	color: #fff;
+	margin-bottom: 0;
+}
+.profile .info > div p:first-child {
+	font-family: lol-bold;
+	font-size: 1.5rem;
+	text-shadow: 0 0 5px #0003;
+	color: #c8aa6e;
+}
+.profile .info > div img {
+	width: 1.2rem;
+	height: 1.2rem;
+	position: relative;
+	bottom: .2rem;
+}
+.profile .info div div > img {
+	position: relative;
+	top: .1rem;
+	margin-right: .4rem;
+}
+.profile .info > div p:not(:first-child) {
+	font-size: 1.2rem;
+}
+.profile .history p {
+	display: inline-block;
+	font-family: lol-bold;
+	font-size: 2.5rem;
+	color: #fff;
+	text-align: center;
+	border-bottom: 2px solid #c8aa6e;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.profile .table {
+	position: relative;
+	color: #fff;
+	background: transparent;
+	box-shadow: 0 0 10px 0 #0005;
+}
+.profile .table::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(2px);
+}
+.profile .table tr,
+.profile .table th,
+.profile .table td {
+	position: relative;
+	z-index: 999;
+}
+.profile .table thead th {
+	padding-top: 1.5rem;
+	border: none;
+	color: #c8aa6e;
+}
+.profile .table tbody td {
+	font-weight: 300;
+	font-size: 1.1rem;
+}
+.profile .table tbody tr td {
+	border-top: none;
+}
+.profile .table tbody tr td:last-child {
+	color: #d28483;
+	font-weight: 400;
+}
+.profile .table tbody tr:last-child td {
+	padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	.profile .container {
+		margin-top: 7rem;
+	}
+	.profile .info > img {
+		width: 12rem;
+		height: 12rem;
+		box-shadow: 0 0 15px 0 #0009;
+		margin: 0 2rem 0 1rem;
+	}
+	.profile .info > div p:first-child {
+		font-size: 2.5rem;
+	}
+	.profile .info > div p:not(:first-child) {
+		font-size: 1.5rem;
+	}
+	.profile .info > div img {
+		width: 1.7rem;
+		height: 1.7rem;
+	}
+	.profile .info > div img {
+		bottom: .3rem;
+	}
+	.profile .history {
+		margin-top: 3rem;
+	}
+	.profile table th {
+		font-size: 1.5rem;
+	}
+	.profile .table tbody td {
+		font-size: 1.5rem;
+	}
+}

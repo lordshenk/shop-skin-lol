@@ -1,0 +1,96 @@
+
+.champ {
+	width: 100%;
+	background-image: url('../../assets/layout-bg.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.champ .footer {
+	position: relative;
+	width: 100%;
+}
+.champ .skins h1:first-child {
+	display: none;
+}
+.champ .skins .carousel-item {
+	height: 100vh !important;
+}
+.champ .skins .carousel-item .buy-btn {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50%);
+	width: 90px;
+	height: 40px;
+	background: #1d2227;
+	border-radius: 5px;
+	box-shadow: 0 0 5px 0 #0005;
+}
+.champ .skins .carousel-item .buy-btn::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(-90%);
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-right: 20px solid #1d2227;
+	border-bottom: 20px solid transparent;
+	z-index: 999;
+}
+.champ .skins .carousel-item .buy-btn::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translateX(90%);
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-left: 20px solid #1d2227;
+	border-bottom: 20px solid transparent;
+	z-index: 999;
+}
+.champ .skins .carousel-item .buy-btn span {
+	position: absolute;
+	left: 32%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-family: lol-bold;
+	font-size: 1.2rem;
+	color: #c28f2c;
+}
+.champ .skins .carousel-item .buy-btn img {
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	left: 58%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+	.champ .skins .carousel-item .buy-btn {
+		height: 60px;
+		width: 150px;
+	}
+	.champ .skins .carousel-item .buy-btn::before {
+		border-top: 30px solid transparent;
+		border-right: 30px solid #1d2227;
+		border-bottom: 30px solid transparent;
+	}
+	.champ .skins .carousel-item .buy-btn::after {
+		border-top: 30px solid transparent;
+		border-left: 30px solid #1d2227;
+		border-bottom: 30px solid transparent;
+	}
+	.champ .skins .carousel-item .buy-btn span {
+		font-size: 1.7rem;
+	}
+	.champ .skins .carousel-item .buy-btn img {
+		height: 33px;
+		width: 33px;
+	}
+}

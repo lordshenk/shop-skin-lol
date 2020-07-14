@@ -3815,7 +3815,7 @@ for ( let i = 0; i < 5; ++i) {
   const skin = testSkin(getSkinInfo());
   trendSkins.push(skin);
 }
-const rp = 10000;
+const rp = 9999;
 export { trendSkins };
 export { rp };
 export default champions;

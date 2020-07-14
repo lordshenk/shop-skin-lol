@@ -6,13 +6,13 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption
+  CarouselCaption,
+  Button
 } from 'reactstrap';
-import { trendSkins } from '../../assets/champions';
+import rp from '../assets/rp.png';
 
-const items = [...trendSkins];
 
-function Trending(props) {
+function Skins({items}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -41,13 +41,19 @@ function Trending(props) {
         key={ind}
       >
         <img src={item.linkImg} alt='' />
-        <CarouselCaption captionText={item.name} captionHeader={item.skin} />
+        <CarouselCaption 
+          captionText={item.name} 
+          captionHeader={item.skin} />
+        <Button className='buy-btn'>
+          <span>{ind % 2 === 0 ? 299 : (ind % 3 === 0 ? 599 : 210)}</span>
+          <img src={rp} alt=""/>
+        </Button>
       </CarouselItem>
     );
   });
 
   return (
-  	<div className='hot'>
+  	<div className='skins'>
   		<h1>Trending</h1>
 	    <Carousel
 	      activeIndex={activeIndex}
@@ -64,4 +70,4 @@ function Trending(props) {
   );
 }
 
-export default Trending;
+export default Skins;

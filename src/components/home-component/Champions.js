@@ -22,7 +22,7 @@ function Champions(props) {
 			<div className='d-flex flex-wrap'>
 				{championsFilter.length === 0 ? champions.map(( ele, ind) => (
 					<div key={ind} className='champion d-flex justify-content-center mb-3 mb-md-5'>
-						<Card className='justify-content-center align-items-center'>
+						<Card tag={Link} to={`/champion/${Object.keys(ele)[0].split(' ').join('')}`} className='justify-content-center align-items-center'>
 							<Lazyload
 								height={200} offset={100} once={true}
 								placeholder={<CardImg top width='100%' src={lazyImg} alt='champion' />}>
@@ -35,7 +35,7 @@ function Champions(props) {
 					</div>
 				)) : championsFilter.map(( ele, ind) => (
 					<div key={ind} className='champion d-flex justify-content-center mb-3 mb-md-5'>
-						<Card className='justify-content-center align-items-center'>
+						<Card tag={Link} to={`/champion/${Object.keys(ele)[0].split(' ').join('')}`} className='justify-content-center align-items-center'>
 							<Lazyload
 								height={200} offset={100} once={true}
 								placeholder={<CardImg top width='100%' src={lazyImg} alt='champion' />}>

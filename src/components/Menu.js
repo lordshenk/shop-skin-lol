@@ -25,6 +25,9 @@ function Menu() {
   }
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    return (() => {
+      window.removeEventListener('scroll', handleScroll);
+    })
   })
   return(
     <div className='menu'>
@@ -36,20 +39,20 @@ function Menu() {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink tag={Link} to='/auth' className='d-md-none'>Sign In</NavLink>
+                <NavLink tag={Link} to='/auth/signin' className='d-md-none'>Sign In</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink tag={Link} to='/'>Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to='/news'>News</NavLink>
+                <NavLink tag={Link} to='/hextech'>Hextech</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink tag={Link} to='/profile'>Profile</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
-          <Button color='info' className='d-none d-md-block ml-auto'>Sign In</Button>
+          <Button tag={Link} to='/auth/signin' color='info' className='d-none d-md-block ml-auto'>Sign In</Button>
       </Navbar>
     </div>
   )
