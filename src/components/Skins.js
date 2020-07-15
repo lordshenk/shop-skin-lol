@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
 import {
   Carousel,
   CarouselItem,
@@ -9,7 +7,7 @@ import {
   CarouselCaption,
   Button
 } from 'reactstrap';
-import rp from '../assets/rp.png';
+import rpImg from '../assets/rp.png';
 
 
 function Skins({items}) {
@@ -40,13 +38,13 @@ function Skins({items}) {
         onExited={() => setAnimating(false)}
         key={ind}
       >
-        <img src={item.linkImg} alt='' />
+        <img src={item.linkImg} alt=''  title={item.name}/>
         <CarouselCaption 
           captionText={item.name} 
           captionHeader={item.skin} />
         <Button className='buy-btn'>
           <span>{ind % 2 === 0 ? 310 : (ind % 3 === 0 ? 599 : (ind % 7 === 0 ? 710 : 110))}</span>
-          <img src={rp} alt=""/>
+          <img src={rpImg} alt=""/>
         </Button>
       </CarouselItem>
     );

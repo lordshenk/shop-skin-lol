@@ -12,6 +12,9 @@ function App() {
     <HashRouter>
       <div className="App" >
         <Switch>
+          <Route path='/home'>
+            <Home />
+          </Route>
           <Route path='/auth'>
             <Auth />
           </Route>

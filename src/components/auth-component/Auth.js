@@ -43,6 +43,7 @@ function Auth() {
 			finalUser = user;
 		}
 		localStorage.setItem('user', finalUser);
+		localStorage.setItem('rp', '9999');
 		history.replace('/home');
 	}
 

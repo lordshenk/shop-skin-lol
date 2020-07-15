@@ -1,16 +1,15 @@
 import React from 'react';
-import 'reactstrap';
 import './Hextech.css';
 import Menu from '../Menu.js';
-import Footer from '../Footer.js';
-import hextech from '../../assets/hextech.png';
+import Carousel from './Carousel.js';
 
 function Hextech() {
 	return (
-		<div className='hextech'>
+		<div className='hextech d-flex flex-column align-items-center justify-content-center'>
 			<Menu />
-			<h1>Hextech Crafting</h1>
-			<img src={hextech} alt=""/>
+			<div className='circle'>
+				<Carousel />
+			</div>
 		</div>
 	)
 }

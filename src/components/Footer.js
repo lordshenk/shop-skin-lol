@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../assets/logo-2.png';
 
 function Footer(props) {
 	function handleClick() {
@@ -9,10 +8,10 @@ function Footer(props) {
 	return(
 		<div className='footer d-flex flex-column align-items-center'>
 			<div onClick={handleClick} className='d-flex align-items-end'>
-				<img src="https://img.icons8.com/ios-glyphs/50/000000/league-of-legends.png"/>
+				<img src="https://img.icons8.com/ios-glyphs/50/000000/league-of-legends.png" alt=''/>
 				<p>Shop Skin Lol</p>
 			</div>
-			<p>Developed by <a href="https://github.com/lordshenk" target='_blank'>Lordshenk</a></p>
+			<p>Developed by <a href="https://github.com/lordshenk" target='_blank' rel="noopener noreferrer">Lordshenk</a></p>
 		</div>
 	)
 }

@@ -2,11 +2,9 @@ import React from 'react';
 import './Champion.css';
 import { useParams } from 'react-router-dom';
 import Menu from '../Menu.js';
-import Footer from '../Footer.js';
 import Skins from '../Skins.js';
 import ScrollTopOnMount from '../ScrollTopOnMount.js';
 import champions from '../../assets/champions.js';
-import { Container, Row, Col, Table } from 'reactstrap';
 
 function Champion() {
 	const { name } = useParams();
@@ -25,7 +23,6 @@ function Champion() {
 			<ScrollTopOnMount />
 			<Menu />
 			<Skins items={items}/>
-			{/*<Footer />*/}
 		</div>
 	)
 }

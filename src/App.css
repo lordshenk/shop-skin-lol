@@ -75,6 +75,7 @@ input:focus {
 	top: -.3rem;
 	margin-left: .5rem;
 }
+
 @media (min-width: 768px) {
 	.menu li:hover a {
 		border-bottom: 2px solid #c28f2c;

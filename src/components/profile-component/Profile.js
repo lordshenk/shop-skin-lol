@@ -1,17 +1,16 @@
 import React from 'react';
 import './Profile.css';
-import { Link } from 'react-router-dom';
 import Menu from '../Menu.js';
-import Footer from '../Footer.js';
 import ScrollTopOnMount from '../ScrollTopOnMount.js';
 import { Container, Row, Col, Table } from 'reactstrap';
 import avts from './Avt.js';
 import mark from "../../assets/mark.webp";
-import rp from '../../assets/rp.png';
+import rpImg from '../../assets/rp.png';
 import { trendSkins as history } from '../../assets/champions.js';
 
 function Profile(props) {
 	const user = localStorage.getItem('user');
+	const rp = localStorage.getItem('rp');
 	return (
 		<div className="profile" style={{backgroundImage: `url(${history[0].linkImg})`}}>
 			<ScrollTopOnMount />
@@ -27,7 +26,7 @@ function Profile(props) {
 								<div>
 									<p>{ user ? user : 'Anonymous'}</p>
 									<p><img src={mark} alt="ingame"/>{ user ? user : 'ingame'}</p>
-									<div className='d-flex '><img src={rp} alt="rp"/><p>{ user ? 9999 : 0}</p></div>
+									<div className='d-flex '><img src={rpImg} alt="rp"/><p>{ user ? rp : 0}</p></div>
 								</div>
 							</div>
 						</Col>
