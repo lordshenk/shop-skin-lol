@@ -214,6 +214,19 @@
 	font-weight: bold;
 	font-size: 1.1rem;
 }
+.champions .pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+	font-size: 1.3rem;
+	opacity: .7;
+}
+.champions .pagination li {
+	padding: 0 .5rem;
+}
+.champions .pagination .active a {
+	color: #c28f2c !important;
+}
 @media (max-width: 320px) {
 	.champions .champion .card-title {
 		font-size: .9rem;
@@ -235,5 +248,10 @@
 	.champions .champion .card-title {
 		font-size: 2rem;
 	}
-	
+	.champions .pagination {
+		font-size: 1.5rem;
+	}
+	.champions .pagination li {
+		padding: 0 .7em;
+	}
 }

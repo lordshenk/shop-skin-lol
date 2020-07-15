@@ -12,6 +12,9 @@ function App() {
     <HashRouter>
       <div className="App" >
         <Switch>
+          <Route path='/home/:page'>
+            <Home />
+          </Route>
           <Route path='/home'>
             <Home />
           </Route>
