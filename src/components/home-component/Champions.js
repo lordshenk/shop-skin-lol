@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardImg, CardBody, CardTitle } from 'reactstrap';
 import { Link, useHistory, useParams } from 'react-router-dom';
 import Lazyload from 'react-lazyload';
