@@ -36,7 +36,7 @@ function HextechCarousel() {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
+        key={ind}
       >
         <img src={item} alt='' />
         <Button className='buy-btn'>
